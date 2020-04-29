@@ -3,17 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23C984FA8B04259F71BDF694 /* Pods_AppWithTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697AEB9577A17AE682AAFF01 /* Pods_AppWithTheme.framework */; };
 		6AC60C2624592FBA004D92EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC60C2524592FBA004D92EC /* AppDelegate.swift */; };
 		6AC60C2824592FBA004D92EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC60C2724592FBA004D92EC /* ViewController.swift */; };
 		6AC60C2A24592FBF004D92EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC60C2924592FBF004D92EC /* Assets.xcassets */; };
 		6AC60C2D24592FBF004D92EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC60C2B24592FBF004D92EC /* Main.storyboard */; };
+		6ACABB5B245932B900221097 /* MyTheme.theme in Resources */ = {isa = PBXBuildFile; fileRef = 6ACABB5A245932B900221097 /* MyTheme.theme */; };
+		6ACABB5E2459550300221097 /* ThemeExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACABB5D2459550300221097 /* ThemeExtentions.swift */; };
+		6ACABB602459558B00221097 /* LightTheme+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACABB5F2459558B00221097 /* LightTheme+App.swift */; };
+		6ACABB622459562F00221097 /* DarkTheme+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACABB612459562F00221097 /* DarkTheme+App.swift */; };
+		6ACABB64245958BA00221097 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACABB63245958BA00221097 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		697AEB9577A17AE682AAFF01 /* Pods_AppWithTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWithTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC60C2224592FBA004D92EC /* AppWithTheme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWithTheme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC60C2524592FBA004D92EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC60C2724592FBA004D92EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +28,13 @@
 		6AC60C2C24592FBF004D92EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AC60C2E24592FBF004D92EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AC60C2F24592FBF004D92EC /* AppWithTheme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppWithTheme.entitlements; sourceTree = "<group>"; };
+		6ACABB5A245932B900221097 /* MyTheme.theme */ = {isa = PBXFileReference; lastKnownFileType = text; path = MyTheme.theme; sourceTree = "<group>"; };
+		6ACABB5D2459550300221097 /* ThemeExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExtentions.swift; sourceTree = "<group>"; };
+		6ACABB5F2459558B00221097 /* LightTheme+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightTheme+App.swift"; sourceTree = "<group>"; };
+		6ACABB612459562F00221097 /* DarkTheme+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DarkTheme+App.swift"; sourceTree = "<group>"; };
+		6ACABB63245958BA00221097 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		9BE40A3422BFF7D5A3C0A634 /* Pods-AppWithTheme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWithTheme.release.xcconfig"; path = "Target Support Files/Pods-AppWithTheme/Pods-AppWithTheme.release.xcconfig"; sourceTree = "<group>"; };
+		AA8E89E5EA7CD11BD8392E8C /* Pods-AppWithTheme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWithTheme.debug.xcconfig"; path = "Target Support Files/Pods-AppWithTheme/Pods-AppWithTheme.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +42,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C984FA8B04259F71BDF694 /* Pods_AppWithTheme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14B8A9EF7ED3803F3F415DAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA8E89E5EA7CD11BD8392E8C /* Pods-AppWithTheme.debug.xcconfig */,
+				9BE40A3422BFF7D5A3C0A634 /* Pods-AppWithTheme.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6AC60C1924592FBA004D92EC = {
 			isa = PBXGroup;
 			children = (
 				6AC60C2424592FBA004D92EC /* AppWithTheme */,
 				6AC60C2324592FBA004D92EC /* Products */,
+				14B8A9EF7ED3803F3F415DAD /* Pods */,
+				E9740840D6DC94CC0DF3059C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,13 +80,26 @@
 			isa = PBXGroup;
 			children = (
 				6AC60C2524592FBA004D92EC /* AppDelegate.swift */,
+				6ACABB5A245932B900221097 /* MyTheme.theme */,
+				6ACABB5D2459550300221097 /* ThemeExtentions.swift */,
+				6ACABB5F2459558B00221097 /* LightTheme+App.swift */,
+				6ACABB612459562F00221097 /* DarkTheme+App.swift */,
 				6AC60C2724592FBA004D92EC /* ViewController.swift */,
+				6ACABB63245958BA00221097 /* DetailsView.swift */,
 				6AC60C2924592FBF004D92EC /* Assets.xcassets */,
 				6AC60C2B24592FBF004D92EC /* Main.storyboard */,
 				6AC60C2E24592FBF004D92EC /* Info.plist */,
 				6AC60C2F24592FBF004D92EC /* AppWithTheme.entitlements */,
 			);
 			path = AppWithTheme;
+			sourceTree = "<group>";
+		};
+		E9740840D6DC94CC0DF3059C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				697AEB9577A17AE682AAFF01 /* Pods_AppWithTheme.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AC60C3224592FBF004D92EC /* Build configuration list for PBXNativeTarget "AppWithTheme" */;
 			buildPhases = (
+				845A45E2CC2261F6C7AE1E09 /* [CP] Check Pods Manifest.lock */,
 				6AC60C1E24592FBA004D92EC /* Sources */,
 				6AC60C1F24592FBA004D92EC /* Frameworks */,
 				6AC60C2024592FBA004D92EC /* Resources */,
+				008C714DCC7E92E6BF0694EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACABB5B245932B900221097 /* MyTheme.theme in Resources */,
 				6AC60C2A24592FBF004D92EC /* Assets.xcassets in Resources */,
 				6AC60C2D24592FBF004D92EC /* Main.storyboard in Resources */,
 			);
@@ -128,13 +170,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		008C714DCC7E92E6BF0694EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppWithTheme/Pods-AppWithTheme-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppWithTheme/Pods-AppWithTheme-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppWithTheme/Pods-AppWithTheme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		845A45E2CC2261F6C7AE1E09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppWithTheme-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6AC60C1E24592FBA004D92EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACABB5E2459550300221097 /* ThemeExtentions.swift in Sources */,
 				6AC60C2824592FBA004D92EC /* ViewController.swift in Sources */,
+				6ACABB622459562F00221097 /* DarkTheme+App.swift in Sources */,
+				6ACABB602459558B00221097 /* LightTheme+App.swift in Sources */,
 				6AC60C2624592FBA004D92EC /* AppDelegate.swift in Sources */,
+				6ACABB64245958BA00221097 /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +355,7 @@
 		};
 		6AC60C3324592FBF004D92EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA8E89E5EA7CD11BD8392E8C /* Pods-AppWithTheme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AppWithTheme/AppWithTheme.entitlements;
@@ -285,6 +374,7 @@
 		};
 		6AC60C3424592FBF004D92EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE40A3422BFF7D5A3C0A634 /* Pods-AppWithTheme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AppWithTheme/AppWithTheme.entitlements;

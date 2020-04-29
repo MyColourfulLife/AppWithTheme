@@ -1,0 +1,16 @@
+PODS:
+  - macOSThemeKit (1.3.0)
+
+DEPENDENCIES:
+  - macOSThemeKit
+
+SPEC REPOS:
+  trunk:
+    - macOSThemeKit
+
+SPEC CHECKSUMS:
+  macOSThemeKit: 48c5f4f069a4990cca2fbca980f878fda4e29dd7
+
+PODFILE CHECKSUM: 3e2679bee04d98096a045a1cd3054b2ef69b247f
+
+COCOAPODS: 1.8.4

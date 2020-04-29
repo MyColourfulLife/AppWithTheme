@@ -1,0 +1,15 @@
+// ************************* Theme Info ************************* //
+displayName = Dark Green Theme
+shortDisplayName = Dark Green
+identifier = com.luckymarmot.ThemeKit.DarkGreen
+darkTheme = true
+
+// *************************** Assets *************************** //
+contentTextColor = $dark.green
+contentBackgroundColor = $light.black
+logoImage = image(named:Logo-Dark)
+//logoImage = image(file:../some/path/Logo-Dark.jpg)
+
+// *********************** Common Colors ************************ //
+dark.green = rgb(130, 155, 80, .9)
+light.black = rgb(5, 25, 5)

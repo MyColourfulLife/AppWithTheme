@@ -7,14 +7,28 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var logoImageView: NSImageView!
+    @IBOutlet weak var themeKitLabel: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        logoImageView.image = ThemeImage.detailsImage
     }
+    
+    @IBAction func lightMode(_ sender: NSButton) {
+        ThemeManager.lightTheme.apply()
+    }
+    
+    @IBAction func darkMode(_ sender: NSButton) {
+        ThemeManager.darkTheme.apply()
+    }
+    
+    
+    
 
     override var representedObject: Any? {
         didSet {

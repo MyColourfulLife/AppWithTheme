@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AppWithTheme" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,6 +689,21 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="AF7C1B17-F248-4C90-93A7-DC4198EA975D" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="rgP-ut-J3C">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="XSE-eR-TP3"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="oI4-I1-iOW"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="eRV-Oq-Jhf"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="5ex-4M-m6i"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="Cd6-XO-dtR"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="XSE-eR-TP3"/>
+                                <toolbarItem reference="oI4-I1-iOW"/>
+                                <toolbarItem reference="Cd6-XO-dtR"/>
+                                <toolbarItem reference="eRV-Oq-Jhf"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -698,20 +714,82 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="78" y="281"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="AppWithTheme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="a7I-uQ-iKH" customClass="DetailsView" customModule="AppWithTheme" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cxh-7J-NhD">
+                                        <rect key="frame" x="190" y="85" width="100" height="100"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="sun" id="CcO-qm-XvO"/>
+                                    </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GHp-uW-WJa">
+                                        <rect key="frame" x="198" y="47" width="85" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Hello Theme" id="t0Y-px-F3W">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmo-pC-zSN">
+                                        <rect key="frame" x="7" y="96" width="71" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Light" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lUg-Ew-6hS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="lightMode:" target="XfG-lQ-9wD" id="0an-9A-ESo"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gja-hw-IAC">
+                                        <rect key="frame" x="78" y="96" width="69" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Dark" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sTR-l0-D7p">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="darkMode:" target="XfG-lQ-9wD" id="yYM-Pn-JBP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GHp-uW-WJa" firstAttribute="top" secondItem="Cxh-7J-NhD" secondAttribute="bottom" constant="22" id="9Wq-ZA-Ssm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="480" id="KQG-mU-aqy"/>
+                                    <constraint firstItem="GHp-uW-WJa" firstAttribute="centerX" secondItem="a7I-uQ-iKH" secondAttribute="centerX" id="Kun-SA-eRY"/>
+                                    <constraint firstItem="Cxh-7J-NhD" firstAttribute="centerY" secondItem="a7I-uQ-iKH" secondAttribute="centerY" id="eSk-cU-vST"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="270" id="kLw-hO-CzL"/>
+                                    <constraint firstItem="Cxh-7J-NhD" firstAttribute="centerX" secondItem="a7I-uQ-iKH" secondAttribute="centerX" id="rjg-Kg-SPB"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="a7I-uQ-iKH" secondAttribute="bottom" id="4nq-r5-e3z"/>
+                            <constraint firstItem="a7I-uQ-iKH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="HOz-Lo-pUd"/>
+                            <constraint firstAttribute="trailing" secondItem="a7I-uQ-iKH" secondAttribute="trailing" id="iy7-5J-O7O"/>
+                            <constraint firstItem="a7I-uQ-iKH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="nkX-xs-zTp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="Cxh-7J-NhD" id="ny4-CV-OLq"/>
+                        <outlet property="themeKitLabel" destination="GHp-uW-WJa" id="cfT-kg-7MB"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sun" width="100" height="100"/>
+    </resources>
 </document>
